@@ -211,6 +211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FPCamera: {fileID: 1835287423}
   range: 100
+  damage: 30
 --- !u!1001 &746329221
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -659,6 +660,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1117639062 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2531368736508171772, guid: f3a0c410c017edaa7af737f2cde72714,
+    type: 3}
+  m_PrefabInstance: {fileID: 2531368736914429888}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1117639069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117639062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c54d83a01fca9499eb0b48c93a409989, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 100
 --- !u!1 &1544553519
 GameObject:
   m_ObjectHideFlags: 0
