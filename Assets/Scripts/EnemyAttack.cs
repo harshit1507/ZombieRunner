@@ -12,7 +12,7 @@ public class EnemyAttack : MonoBehaviour
         target = FindObjectOfType<PlayerHealth>();
     }
 
-    private void AttackHitEvent()
+    public void AttackHitEvent()
     {
         if (!target)
             return;

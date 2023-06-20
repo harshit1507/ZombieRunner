@@ -11,7 +11,7 @@ public class PlayerHealth : MonoBehaviour
         playerHealth -= damage;
         if (playerHealth <= 0)
         {
-            FindObjectOfType<SceneLoader>().gameObject.SetActive(true);
+            GetComponent<DeathHandler>().HandleDeath();
             //Destroy(gameObject);
         }
     }

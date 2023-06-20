@@ -39,6 +39,10 @@ public class EnemyAI : MonoBehaviour
         
     }
 
+    public void OnDamageTaken()
+    {
+        isProvked = true;
+    }
     void EngageTarget()
     {
         FaceTarget();
@@ -62,6 +66,7 @@ public class EnemyAI : MonoBehaviour
     void AttackTarget()
     {
        animator.SetBool("attack", true);
+       FindObjectOfType<EnemyAttack>().AttackHitEvent();
     }
 
     void FaceTarget()
