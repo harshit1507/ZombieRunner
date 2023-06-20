@@ -2199,6 +2199,8 @@ MonoBehaviour:
   zoomedOutFOV: 60
   zoomedInFOV: 20
   animator: {fileID: 2089366922}
+  ZoomOutSensitivity: 1
+  ZoomInSensitivity: 0.25
 --- !u!1 &2114283753834967212
 GameObject:
   m_ObjectHideFlags: 0
