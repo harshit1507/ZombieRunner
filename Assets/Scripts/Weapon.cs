@@ -9,25 +9,32 @@ public class Weapon : MonoBehaviour
     [SerializeField] private Camera FPCamera;
     [SerializeField] private float range = 100f;
     [SerializeField] private float damage = 10;
+    [SerializeField] private float timeBetweenShots = 0.5f;
     [SerializeField] private ParticleSystem muzzleFlash;
     [SerializeField] private GameObject hitEffect;
     [SerializeField] private Ammo ammoSlot;
+
+    private bool canShoot = true;
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetMouseButtonDown(0) && canShoot)
         {
-            Shoot();
+            StartCoroutine(Shoot());
         }
     }
 
-    void Shoot()
+    IEnumerator Shoot()
     {
+        canShoot = false;
         if (ammoSlot.GetCurrentAmmoAmount() > 0)
         {
             PlayMuzzleFlash();
             ProcessRaycast();
             ammoSlot.ReduceCurrentAmmo();
         }
+
+        yield return new WaitForSeconds(timeBetweenShots);
+        canShoot = true;
     }
 
     private void ProcessRaycast()

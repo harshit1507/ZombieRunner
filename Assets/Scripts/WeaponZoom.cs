@@ -6,19 +6,18 @@ using UnityEngine;
 
 public class WeaponZoom : MonoBehaviour
 {
-    [SerializeField] private CinemachineVirtualCamera FPSCamera;
-    [SerializeField] private float zoomedOutFOV = 60;
-    [SerializeField] private float zoomedInFOV = 20;
+    //[SerializeField] private CinemachineVirtualCamera FPSCamera;
+    //[SerializeField] private float zoomedOutFOV = 60;
+    //[SerializeField] private float zoomedInFOV = 20;
     [SerializeField] private Animator animator;
     [SerializeField] private float ZoomOutSensitivity =1f;
     [SerializeField] private float ZoomInSensitivity = 0.25f;
-
-    private FirstPersonController fpsController;
+    [SerializeField] private FirstPersonController fpsController;
     private bool zoomedInToggle = false;
     // Start is called before the first frame update
     void Start()
     {
-        fpsController = GetComponent<FirstPersonController>();
+        // fpsController = GetComponent<FirstPersonController>();
     }
 
     // Update is called once per frame

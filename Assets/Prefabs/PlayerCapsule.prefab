@@ -145,7 +145,6 @@ GameObject:
   - component: {fileID: 8616685848737228376}
   - component: {fileID: 135756641613574980}
   - component: {fileID: 135756641613574984}
-  - component: {fileID: 135756641613574985}
   - component: {fileID: 135756641613574986}
   m_Layer: 8
   m_Name: PlayerCapsule
@@ -381,24 +380,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverCanvas: {fileID: 0}
---- !u!114 &135756641613574985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8616685848737228372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2a104562e3955a638fae0dd33ae34d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FPSCamera: {fileID: 6225640760722257021}
-  zoomedOutFOV: 60
-  zoomedInFOV: 20
-  animator: {fileID: 2089366922}
-  ZoomOutSensitivity: 1
-  ZoomInSensitivity: 0.25
 --- !u!114 &135756641613574986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -484,63 +465,20 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 4135013735270702856}
-    - target: {fileID: 8762286023885395323, guid: 9c489a8547f4d9e4387da15a4ff82c81,
-        type: 3}
-      propertyPath: m_Lens.FieldOfView
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 8762286023885395323, guid: 9c489a8547f4d9e4387da15a4ff82c81,
-        type: 3}
-      propertyPath: m_Lens.NearClipPlane
-      value: 0.1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
+--- !u!95 &3457656205370774668 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2089366922, guid: 9c489a8547f4d9e4387da15a4ff82c81,
+    type: 3}
+  m_PrefabInstance: {fileID: 3457656204623732998}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6225640760722257020 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8762286023885395322, guid: 9c489a8547f4d9e4387da15a4ff82c81,
     type: 3}
   m_PrefabInstance: {fileID: 3457656204623732998}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6225640760722257021 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8762286023885395323, guid: 9c489a8547f4d9e4387da15a4ff82c81,
-    type: 3}
-  m_PrefabInstance: {fileID: 3457656204623732998}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6225640760722257283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &6225640760722257283 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8762286023885395077, guid: 9c489a8547f4d9e4387da15a4ff82c81,
-    type: 3}
-  m_PrefabInstance: {fileID: 3457656204623732998}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &2089366922
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6225640760722257283}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e44e34fa359594339907f8a24d1d7b94, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &5332506359678443697
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -552,6 +490,14 @@ PrefabInstance:
       propertyPath: ammoSlot
       value: 
       objectReference: {fileID: 135756641613574986}
+    - target: {fileID: 736662349, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 3457656205370774668}
+    - target: {fileID: 736662349, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
+      propertyPath: fpsController
+      value: 
+      objectReference: {fileID: 8616685848737228371}
     - target: {fileID: 1038672623091551508, guid: 2d3a85ecde41a8246a79669975912b74,
         type: 3}
       propertyPath: ammoSlot
@@ -616,6 +562,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74,
+        type: 3}
+      propertyPath: field of view
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430823, guid: 2d3a85ecde41a8246a79669975912b74,
         type: 3}
