@@ -9,6 +9,7 @@ public class SceneLoader : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 1;
+        Cursor.visible = false;
     }
 
     public void PlayAgain()
