@@ -687,7 +687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c54d83a01fca9499eb0b48c93a409989, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 100
+  enemyHealth: 100
 --- !u!114 &1117639070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -700,7 +700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 535c57573012817188c14da7ae4faf70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 135756641613574979}
+  target: {fileID: 0}
   damage: 40
 --- !u!1 &1544553519
 GameObject:

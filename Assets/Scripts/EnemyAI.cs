@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -8,6 +9,7 @@ public class EnemyAI : MonoBehaviour
 {
     [SerializeField] private Transform target;
     [SerializeField] private float chaseRange = 5;
+    [SerializeField] private float turnSpeed = 5;
     [SerializeField] private Animator animator;
     
     private NavMeshAgent navMeshAgent;
@@ -39,6 +41,7 @@ public class EnemyAI : MonoBehaviour
 
     void EngageTarget()
     {
+        FaceTarget();
         if (distanceToTarget >= navMeshAgent.stoppingDistance)
         {
             ChaseTarget();
@@ -61,6 +64,12 @@ public class EnemyAI : MonoBehaviour
        animator.SetBool("attack", true);
     }
 
+    void FaceTarget()
+    {
+        Vector3 direction = (target.position - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * turnSpeed);
+    }
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
