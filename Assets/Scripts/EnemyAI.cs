@@ -66,7 +66,7 @@ public class EnemyAI : MonoBehaviour
     void AttackTarget()
     {
        animator.SetBool("attack", true);
-       FindObjectOfType<EnemyAttack>().AttackHitEvent();
+       //FindObjectOfType<EnemyAttack>().AttackHitEvent();
     }
 
     void FaceTarget()
