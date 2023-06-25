@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
@@ -27,18 +28,33 @@ public class WeaponZoom : MonoBehaviour
         {
             if (!zoomedInToggle)
             {
-                zoomedInToggle = true;
-                fpsController.RotationSpeed = ZoomInSensitivity;
-                //FPSCamera.m_Lens.FieldOfView = zoomedInFOV;
-                animator.SetBool("isZoomed", true);
+                ZoomIn();
             }
             else
             {
-                zoomedInToggle = false;
-                fpsController.RotationSpeed = ZoomOutSensitivity;
-                //FPSCamera.m_Lens.FieldOfView = zoomedOutFOV;
-                animator.SetBool("isZoomed", false);
+                ZoomOut();
             }
         }
+    }
+
+    private void ZoomOut()
+    {
+        zoomedInToggle = false;
+        fpsController.RotationSpeed = ZoomOutSensitivity;
+        //FPSCamera.m_Lens.FieldOfView = zoomedOutFOV;
+        animator.SetBool("isZoomed", false);
+    }
+
+    private void ZoomIn()
+    {
+        zoomedInToggle = true;
+        fpsController.RotationSpeed = ZoomInSensitivity;
+        //FPSCamera.m_Lens.FieldOfView = zoomedInFOV;
+        animator.SetBool("isZoomed", true);
+    }
+
+    private void OnDisable()
+    {
+        ZoomOut();
     }
 }

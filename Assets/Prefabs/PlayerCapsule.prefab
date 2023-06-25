@@ -392,7 +392,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 937baf42d2dfe462388ad4b927cea327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoAmount: 100
+  ammoSlots:
+  - ammoType: 0
+    ammoAmount: 10
+  - ammoType: 1
+    ammoAmount: 20
+  - ammoType: 2
+    ammoAmount: 8
 --- !u!1001 &3457656204623732998
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -503,6 +509,21 @@ PrefabInstance:
       propertyPath: ammoSlot
       value: 
       objectReference: {fileID: 135756641613574986}
+    - target: {fileID: 1038672623091551508, guid: 2d3a85ecde41a8246a79669975912b74,
+        type: 3}
+      propertyPath: timeBetweenShots
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1058989718255255276, guid: 2d3a85ecde41a8246a79669975912b74,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 3457656205370774668}
+    - target: {fileID: 1058989718255255276, guid: 2d3a85ecde41a8246a79669975912b74,
+        type: 3}
+      propertyPath: fpsController
+      value: 
+      objectReference: {fileID: 8616685848737228371}
     - target: {fileID: 5458726549815715341, guid: 2d3a85ecde41a8246a79669975912b74,
         type: 3}
       propertyPath: ammoSlot
