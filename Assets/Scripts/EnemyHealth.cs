@@ -5,14 +5,29 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
    [SerializeField] private float enemyHealth = 100f;
+   [SerializeField] private bool isDead = false;
 
    public void TakeDamage(float damage)
    {
-      BroadcastMessage("OnDamageTaken");
-      enemyHealth -= damage;
-      if (enemyHealth <= 0)
+      if (!isDead)
       {
-         Destroy(gameObject);
+         BroadcastMessage("OnDamageTaken");
+         enemyHealth -= damage;
+         if (enemyHealth <= 0)
+         {
+            Die();
+         }
       }
+   }
+
+   private void Die()
+   {
+      isDead = true;
+      GetComponent<Animator>().SetTrigger("die");
+   }
+
+   public bool IsDead()
+   {
+      return isDead;
    }
 }

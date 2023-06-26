@@ -2338,6 +2338,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1117639070, guid: f3a0c410c017edaa7af737f2cde72714, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2531368736508171649, guid: f3a0c410c017edaa7af737f2cde72714,
         type: 3}
       propertyPath: m_RootOrder
@@ -2393,6 +2397,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2531368736508171650, guid: f3a0c410c017edaa7af737f2cde72714,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 1.4
+      objectReference: {fileID: 0}
     - target: {fileID: 2531368736508171772, guid: f3a0c410c017edaa7af737f2cde72714,
         type: 3}
       propertyPath: m_Name
@@ -2422,6 +2431,11 @@ PrefabInstance:
       propertyPath: gameOverCanvas
       value: 
       objectReference: {fileID: 831241720}
+    - target: {fileID: 5332506360310248440, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
+        type: 3}
+      propertyPath: timeBetweenShots
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
       propertyPath: m_Name
