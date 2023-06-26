@@ -214,25 +214,10 @@ PrefabInstance:
       propertyPath: FPCamera
       value: 
       objectReference: {fileID: 9005220659476430821}
-    - target: {fileID: 1058989718255255272, guid: 97d49ffff26876d87aa42250e6901f4b,
-        type: 3}
-      propertyPath: ammoSlot
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1058989718255255272, guid: 97d49ffff26876d87aa42250e6901f4b,
-        type: 3}
-      propertyPath: timeBetweenShots
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 1871662489939453491, guid: 97d49ffff26876d87aa42250e6901f4b,
         type: 3}
       propertyPath: m_Name
       value: Shotgun
-      objectReference: {fileID: 0}
-    - target: {fileID: 1871662489939453491, guid: 97d49ffff26876d87aa42250e6901f4b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1871662489939491347, guid: 97d49ffff26876d87aa42250e6901f4b,
         type: 3}

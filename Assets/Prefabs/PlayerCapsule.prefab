@@ -496,24 +496,11 @@ PrefabInstance:
       propertyPath: ammoSlot
       value: 
       objectReference: {fileID: 135756641613574986}
-    - target: {fileID: 736662349, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 3457656205370774668}
-    - target: {fileID: 736662349, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
-      propertyPath: fpsController
-      value: 
-      objectReference: {fileID: 8616685848737228371}
     - target: {fileID: 1038672623091551508, guid: 2d3a85ecde41a8246a79669975912b74,
         type: 3}
       propertyPath: ammoSlot
       value: 
       objectReference: {fileID: 135756641613574986}
-    - target: {fileID: 1038672623091551508, guid: 2d3a85ecde41a8246a79669975912b74,
-        type: 3}
-      propertyPath: timeBetweenShots
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1058989718255255276, guid: 2d3a85ecde41a8246a79669975912b74,
         type: 3}
       propertyPath: animator
@@ -524,6 +511,11 @@ PrefabInstance:
       propertyPath: fpsController
       value: 
       objectReference: {fileID: 8616685848737228371}
+    - target: {fileID: 4540090441538898282, guid: 2d3a85ecde41a8246a79669975912b74,
+        type: 3}
+      propertyPath: currentWeapon
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5458726549815715341, guid: 2d3a85ecde41a8246a79669975912b74,
         type: 3}
       propertyPath: ammoSlot
@@ -583,16 +575,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74,
-        type: 3}
-      propertyPath: field of view
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74,
-        type: 3}
-      propertyPath: near clip plane
-      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430823, guid: 2d3a85ecde41a8246a79669975912b74,
         type: 3}
